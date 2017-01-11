@@ -1,9 +1,14 @@
 words = open ('words.txt')
 dict={}
+i=0
 for word in words:
 	word=word.strip()
-	if (len(word)>2 and len(word)<8):
+	if (len(word)>2 and len(word)<7):
 		key = ''.join(sorted(word))
+
+		i+=1
+		if i > 10: break
+
 		if key in dict:
 			#print(key)
 			dict[key].append(word)
